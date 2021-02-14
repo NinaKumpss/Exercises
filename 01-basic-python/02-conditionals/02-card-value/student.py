@@ -10,4 +10,4 @@ def card_value(string):
         return 1
     else:
         return int(string) 
-#door de int wordt de stirng gezien als een getal ipv een string
+#door de int wordt de string gezien als een getal ipv een string
