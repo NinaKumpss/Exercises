@@ -14,5 +14,5 @@ artist = to_url(artist)
 url = f"https://api.lyrics.ovh/v1/{artist}/{title}"
 
 with urllib.request.urlopen(url) as input:
-    contents = json.loads(input.read())
+    data = json.loads(input.read())
     print(data['lyrics'])
