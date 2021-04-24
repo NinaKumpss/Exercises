@@ -3,16 +3,11 @@ import urllib.request
 import json
 import re
 
-def to_url(string):
-    #URLs cannot contain spaces. Replaces each space by %20.
-    return re.sub(' ', '%20', string)
-
-artist, title = sys.argv[1:]
-title = to_url(title)
-artist = to_url(artist)
-
+artist = "%20".join(sys.argv[1].split())
+title = "%20".join(sys.argv[2].split())
 url = f"https://api.lyrics.ovh/v1/{artist}/{title}"
+print(url)
 
 with urllib.request.urlopen(url) as input:
-    data = json.loads(input.read())
-    print(data['lyrics'])
+    jsonData =json.loads(input.read())
+    print(jsonData[lyrics])
