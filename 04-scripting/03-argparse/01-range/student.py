@@ -1,5 +1,5 @@
 import argparse
-parser = argparse.ArgumentParser(prog='student')
+parser = argparse.ArgumentParser()
 parser.add_argument('start', help='Starting value', type=int) #positional parameter
 parser.add_argument('end', help='Ending value (inclusive by default)', type=int)
 #flag
